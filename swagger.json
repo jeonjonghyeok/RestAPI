@@ -1,0 +1,683 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "My User Project CRUD",
+        "description": "My User Project Application API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "34.64.168.102:5000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "renewable",
+            "description": "API for users in the system"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/insight/key/new": {
+            "post": {
+                "tags": [
+                    "insight"
+                ],
+                "description": "Create new keyinsight in system",
+                "parameters": [
+                    {
+                        "name": "keyinsight",
+                        "in": "body",
+                        "description": "keyinsight that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/keyinsight"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "칼럼이 추가되었습니다."
+                    }
+                }
+            }
+        },
+        "/insight/key/get": {
+            "get": {
+                "tags": [
+                    "insight"
+                ],
+                "summary": "Get all keyinsight in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/keyinsight"
+                        }
+                    }
+                }
+            }
+        },
+        "/insight/new": {
+            "post": {
+                "tags": [
+                    "insight"
+                ],
+                "description": "Create new insight in system",
+                "parameters": [
+                    {
+                        "name": "insight",
+                        "in": "body",
+                        "description": "insight that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/insight"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "칼럼이 추가되었습니다."
+                    }
+                }
+            }
+        },
+        "/insight/get": {
+            "get": {
+                "tags": [
+                    "insight"
+                ],
+                "summary": "Get all insight in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/insight"
+                        }
+                    }
+                }
+            }
+        },
+        "/renewable": {
+            "get": {
+                "tags": [
+                    "renewable"
+                ],
+                "summary": "Get all renewable in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/renewable"
+                        }
+                    }
+                }
+            }
+        },
+        "/renewable/integrated": {
+            "get": {
+                "tags": [
+                    "renewable"
+                ],
+                "summary": "Get all renewable in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/renewableintegrated"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "renewable"
+                ],
+                "description": "Create new energy in system",
+                "parameters": [
+                    {
+                        "name": "renewable",
+                        "in": "body",
+                        "description": "User that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/renewableintegrated"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "칼럼이 추가되었습니다."
+                    }
+                }
+            }
+        },
+        "/renewable/new": {
+            "post": {
+                "tags": [
+                    "renewable"
+                ],
+                "description": "Create new energy in system",
+                "parameters": [
+                    {
+                        "name": "renewable",
+                        "in": "body",
+                        "description": "renewable that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/renewable"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "칼럼이 추가되었습니다."
+                    }
+                }
+            }
+        },
+        "/emobility/integrated": {
+            "get": {
+                "tags": [
+                    "emobility"
+                ],
+                "summary": "Get all renewable in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/emobilityintegrated"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "emobility"
+                ],
+                "description": "Create new emobility in system",
+                "parameters": [
+                    {
+                        "name": "emobility",
+                        "in": "body",
+                        "description": "User that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/emobilityintegrated"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "칼럼이 추가되었습니다."
+                    }
+                }
+            }
+        },
+        "/emobility/new": {
+            "post": {
+                "tags": [
+                    "emobility"
+                ],
+                "description": "Create new energy in system",
+                "parameters": [
+                    {
+                        "name": "emobility",
+                        "in": "body",
+                        "description": "emobility that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/emobility"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "칼럼이 추가되었습니다."
+                    }
+                }
+            }
+        },
+        "/emobility": {
+            "get": {
+                "tags": [
+                    "emobility"
+                ],
+                "summary": "Get all emobility in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/emobility"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "renewable": {
+            "properties": {
+                "solar": {
+                    "type": "object",
+                    "properties": {
+                        "weekly_power_generation": {
+                            "type": "object",
+                            "properties": {
+                                "1": {
+                                    "type": "integer"
+                                },
+                                "2": {
+                                    "type": "integer"
+                                },
+                                "3": {
+                                    "type": "integer"
+                                },
+                                "4": {
+                                    "type": "integer"
+                                },
+                                "5": {
+                                    "type": "integer"
+                                },
+                                "6": {
+                                    "type": "integer"
+                                },
+                                "7": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "monthly_power_generation": {
+                            "type": "object",
+                            "properties": {
+                                "1": {
+                                    "type": "integer"
+                                },
+                                "2": {
+                                    "type": "integer"
+                                },
+                                "3": {
+                                    "type": "integer"
+                                },
+                                "4": {
+                                    "type": "integer"
+                                },
+                                "5": {
+                                    "type": "integer"
+                                },
+                                "6": {
+                                    "type": "integer"
+                                },
+                                "7": {
+                                    "type": "integer"
+                                },
+                                "8": {
+                                    "type": "integer"
+                                },
+                                "9": {
+                                    "type": "integer"
+                                },
+                                "10": {
+                                    "type": "integer"
+                                },
+                                "11": {
+                                    "type": "integer"
+                                },
+                                "12": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                },
+                "windy": {
+                    "type": "object",
+                    "properties": {
+                        "weekly_power_generation": {
+                            "type": "object",
+                            "properties": {
+                                "1": {
+                                    "type": "integer"
+                                },
+                                "2": {
+                                    "type": "integer"
+                                },
+                                "3": {
+                                    "type": "integer"
+                                },
+                                "4": {
+                                    "type": "integer"
+                                },
+                                "5": {
+                                    "type": "integer"
+                                },
+                                "6": {
+                                    "type": "integer"
+                                },
+                                "7": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "monthly_power_generation": {
+                            "type": "object",
+                            "properties": {
+                                "1": {
+                                    "type": "integer"
+                                },
+                                "2": {
+                                    "type": "integer"
+                                },
+                                "3": {
+                                    "type": "integer"
+                                },
+                                "4": {
+                                    "type": "integer"
+                                },
+                                "5": {
+                                    "type": "integer"
+                                },
+                                "6": {
+                                    "type": "integer"
+                                },
+                                "7": {
+                                    "type": "integer"
+                                },
+                                "8": {
+                                    "type": "integer"
+                                },
+                                "9": {
+                                    "type": "integer"
+                                },
+                                "10": {
+                                    "type": "integer"
+                                },
+                                "11": {
+                                    "type": "integer"
+                                },
+                                "12": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "renewableintegrated": {
+            "properties": {
+                "cumulative_power_generation": {
+                    "type": "integer"
+                },
+                "total_facility_capacity": {
+                    "type": "integer"
+                },
+                "co2_reduction": {
+                    "type": "integer"
+                },
+                "drinking_water_effect": {
+                    "type": "integer"
+                },
+                "number_of_chargers_installed": {
+                    "type": "integer"
+                },
+                "electricity_extraction_volume": {
+                    "type": "integer"
+                }
+            }
+        },
+        "emobilityintegrated": {
+            "properties": {
+                "members": {
+                    "type": "integer"
+                },
+                "cumulative_ride": {
+                    "type": "integer"
+                },
+                "electric_vehical_shared": {
+                    "type": "integer"
+                },
+                "ecar_available": {
+                    "type": "integer"
+                },
+                "ecar_unusable": {
+                    "type": "integer"
+                },
+                "ecar_charging": {
+                    "type": "integer"
+                },
+                "ecar_total": {
+                    "type": "integer"
+                },
+                "ekickboard_available": {
+                    "type": "integer"
+                },
+                "ekickboard_unusable": {
+                    "type": "integer"
+                },
+                "ekickboard_chargin": {
+                    "type": "integer"
+                },
+                "ekickboard_total": {
+                    "type": "integer"
+                }
+            }
+        },
+        "emobility": {
+            "properties": {
+                "cumulative_ride": {
+                    "type": "integer"
+                },
+                "electric_vehical_shared": {
+                    "type": "integer"
+                },
+                "parking_are_reduction": {
+                    "type": "integer"
+                },
+                "renewable_energy_consumption": {
+                    "type": "integer"
+                },
+                "traffic_sharing_rate": {
+                    "type": "integer"
+                },
+                "greego": {
+                    "type": "integer"
+                },
+                "drt": {
+                    "type": "integer"
+                },
+                "twizy": {
+                    "type": "integer"
+                },
+                "un1": {
+                    "type": "integer"
+                },
+                "un2": {
+                    "type": "integer"
+                },
+                "un3": {
+                    "type": "integer"
+                }
+            }
+        },
+        "insight": {
+            "properties": {
+                "sinchang": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_power_generation": {
+                            "type": "integer"
+                        },
+                        "monthly_surplus_power_generation": {
+                            "type": "integer"
+                        },
+                        "reduction_rate": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "gashiri": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_power_generation": {
+                            "type": "integer"
+                        },
+                        "monthly_surplus_power_generation": {
+                            "type": "integer"
+                        },
+                        "reduction_rate": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "haengwon": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_power_generation": {
+                            "type": "integer"
+                        },
+                        "monthly_surplus_power_generation": {
+                            "type": "integer"
+                        },
+                        "reduction_rate": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "Jungmun": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_users": {
+                            "type": "integer"
+                        },
+                        "monthly_charge": {
+                            "type": "integer"
+                        },
+                        "monthly_co2_reduction": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "seogwi": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_users": {
+                            "type": "integer"
+                        },
+                        "monthly_charge": {
+                            "type": "integer"
+                        },
+                        "monthly_co2_reduction": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "drt": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_users": {
+                            "type": "integer"
+                        },
+                        "parking_area_reduction_effect": {
+                            "type": "integer"
+                        },
+                        "estimated_response_time": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "promotion": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_users": {
+                            "type": "integer"
+                        },
+                        "monthly_charge": {
+                            "type": "integer"
+                        },
+                        "monthly_co2_reduction": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "solar": {
+                    "type": "object",
+                    "properties": {
+                        "monthly_power_generation": {
+                            "type": "integer"
+                        },
+                        "monthly_surplus_power_generation": {
+                            "type": "integer"
+                        },
+                        "reduction_rate": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        },
+        "keyinsight": {
+            "properties": {
+                "total_power_generation": {
+                    "type": "integer"
+                },
+                "co2_reduction": {
+                    "type": "integer"
+                },
+                "reduction_power_rate_previous_year": {
+                    "type": "integer"
+                },
+                "power_surplus_2019": {
+                    "type": "integer"
+                },
+                "power_surplus_2020": {
+                    "type": "integer"
+                },
+                "emobility_user": {
+                    "type": "integer"
+                },
+                "renewable_enery_consuption": {
+                    "type": "integer"
+                }
+            }
+        },
+        "user": {
+            "properties": {
+                "email": {
+                    "type": "String"
+                },
+                "password": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "integer"
+                },
+                "SSN": {
+                    "type": "integer"
+                }
+            }
+        }
+        
+    }
+}
