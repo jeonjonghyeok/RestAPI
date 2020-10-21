@@ -13,7 +13,7 @@ const { auth } = require("../../util/auth");
 // Register New User
 router.post("/register", async (request, response) => {
     console.log("REGISTER REQUEST")
-    const { email, password, name, SSN } = request.body;
+    const { email, password, name } = request.body;
     // Checking if user exists
     await User.findOne({ email: `${email}` })
         .then((user) => {
@@ -26,7 +26,7 @@ router.post("/register", async (request, response) => {
                     email,
                     password,
                     name,
-                    SSN
+                    // SSN
                 });
                 // Create Salt & Hash
                 bcrypt.genSalt(10, async (err, salt) => {
@@ -53,7 +53,7 @@ router.post("/register", async (request, response) => {
                                             id: user.id,
                                             email: user.email,
                                             name: user.name,
-                                            SSN: user.SSN
+                                            // SSN: user.SSN
                                         },
                                     });
                                 }
@@ -107,7 +107,7 @@ router.post("/login", async (request, response) => {
                                                 id: user.id,
                                                 email: user.email,
                                                 name: user.name,
-                                                SSN: user.SSN
+                                                // SSN: user.SSN
                                             },
                                         });
                                 }

@@ -1079,24 +1079,141 @@
         ],
         "type": "object",
         "properties": {
-          "title": {
-            "type": "string"
+          "jongmun": {
+            "type": "object",
+            "properties": {
+              "musers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mcharge": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
           },
-          "type": {
-            "type": "string"
+          "sinchang": {
+            "type": "object",
+            "properties": {
+              "mpowergenaration": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "msurplus": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
           },
-          "lat": {
-            "type": "number"
+          "seogwi": {
+            "type": "object",
+            "properties": {
+              "musers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mcharge": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
           },
-          "lng": {
-            "type": "number"
+          "gashiri": {
+            "type": "object",
+            "properties": {
+              "musers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mcharge": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
           },
-          "details": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": ""
+          "haengwon": {
+            "type": "object",
+            "properties": {
+              "musers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mcharge": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          "shelter": {
+            "type": "object",
+            "properties": {
+              "musers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mcharge": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          "publicfacilities": {
+            "type": "object",
+            "properties": {
+              "musers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mcharge": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          "drt": {
+            "type": "object",
+            "properties": {
+              "musers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mcharge": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "mco2reduction": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
           }
         },
         "example": {

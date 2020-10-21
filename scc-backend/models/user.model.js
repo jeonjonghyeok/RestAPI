@@ -31,11 +31,11 @@ const userSchema = new Schema(
     name: {
       type: String,
       required: true,
-    },
-    SSN: {
-        type: Number,
-        required: true
-    },
+    }
+    // SSN: {
+    //     type: Number,
+    //     required: true
+    // },
   },
   {
     timestamps: true,

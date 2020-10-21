@@ -26,6 +26,48 @@ const icons = {
     'wind_solar': windsolar,
     'drt': drt
 }
+// const viewpoint = {
+//     'jungmun': {
+//         latitude: 33.251292,
+//         longitude: 126.431457,
+//         type: 'smarthub'
+//     },
+//     'sinchang': {
+//         latitude: 33.343849,
+//         longitude: 126.185533,
+//         type: 'windy'
+//     },
+//     'seogwi': {
+//         latitude: 33.254219,
+//         longitude: 126.560119,
+//         type: 'smarthub'
+//     },
+//     'gashiri': {
+//         latitude: 33.421396,
+//         longitude: 126.685626,
+//         type: 'wind_solar'
+//     },
+//     'haengwon': {
+//         latitude: 33.529681,
+//         longitude: 126.789599,
+//         type: 'wind_solar'
+//     },
+//     'shelter': {
+//         latitude: 33.465554,
+//         longitude: 126.933859,
+//         type: 'smart_shelter'
+//     },
+//     'publicfacilities': {
+//         latitude: 33.447039,
+//         longitude: 126.508976,
+//         type: 'solar'
+//     },
+//     'drt': {
+//         latitude: 33.408321,
+//         longitude: 126.266246,
+//         type: 'smarthub'
+//     },
+// }
 
 class Insights extends Component {
 
@@ -51,7 +93,74 @@ class Insights extends Component {
                 renewable_enery_consuption: 0
             },
             data: []
+            // data: {
+            //     jungmun: {
+            //         musers: 0,
+            //         mcharge: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.251292,
+            //         longitude: 126.431457,
+            //         type: 'smarthub'
+            //     },
+            //     sinchang: {
+            //         mpowergenaration: 0,
+            //         msurplus: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.343849,
+            //         longitude: 126.185533,
+            //         type: 'windy'
+            //     },
+            //     seogwi: {
+            //         musers: 0,
+            //         mcharge: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.254219,
+            //         longitude: 126.560119,
+            //         type: 'smarthub'
+            //     },
+            //     gashiri: {
+            //         musers: 0,
+            //         mcharge: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.421396,
+            //         longitude: 126.685626,
+            //         type: 'wind_solar'
+            //     },
+            //     haengwon: {
+            //         musers: 0,
+            //         mcharge: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.529681,
+            //         longitude: 126.789599,
+            //         type: 'wind_solar'
+            //     },
+            //     shelter: {
+            //         musers: 0,
+            //         mcharge: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.465554,
+            //         longitude: 126.933859,
+            //         type: 'smart_shelter'
+            //     },
+            //     publicfacilities: {
+            //         musers: 0,
+            //         mcharge: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.447039,
+            //         longitude: 126.508976,
+            //         type: 'solar'
+            //     },
+            //     drt: {
+            //         musers: 0,
+            //         mcharge: 0,
+            //         mco2reduction: 0,
+            //         latitude: 33.408321,
+            //         longitude: 126.266246,
+            //         type: 'smarthub'
+            //     }
+            // }
         };
+        
     }
 
     componentDidMount() {
@@ -227,7 +336,7 @@ class Insights extends Component {
                                         <ul>
                                             {this.state.hoveritem.details.map((detail) => {
                                                 return (
-                                                    <li style={{'fontSize':'10px'}}>
+                                                    <li style={{ 'fontSize': '10px' }}>
                                                         {detail}
                                                     </li>
                                                 );
@@ -276,7 +385,7 @@ class Insights extends Component {
                                     <img src={solar} height="50px" />
                                 </td>
                                 <td>
-                                     태양광 발전단지
+                                    태양광 발전단지
                                 </td>
                                 <td>
                                     <img src={smarthub} height="50px" />
