@@ -1,0 +1,24 @@
+.partMain {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+.partIn {
+    width: 70%;
+    height: 350px;
+    /* background-color: yellow; */
+}
+
+.mapDiv {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}

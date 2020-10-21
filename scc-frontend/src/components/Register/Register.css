@@ -1,0 +1,28 @@
+.RegisterFULL {
+    text-align: left;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px gray;
+    transition: 0.2s;
+    margin-left: 20px;
+}
+
+.RegisterFULL:hover {
+    box-shadow: 0px 1px 5px gray;
+}
+
+.registerBttn {
+    background-color: rgb(44, 104, 172);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    width: 50%;
+    transition: 0.5s;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.registerBttn:hover {
+    opacity: 0.5;
+}

@@ -1,0 +1,71 @@
+.InsightsMain {
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #2b2a2a;
+}
+
+.popupMain {
+}
+
+.title {
+    border-bottom: 1px solid black;
+    width: 200px;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+.details {
+    width: 200px;
+    word-wrap: break-word;
+}
+
+.keyInsights {
+    box-shadow: 1px 1px 10px grey;
+    padding: 10px;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px;
+    /* left: 50px;
+    top: 50px; */
+    z-index: 100;
+}
+
+.keyInsights table {
+    font-size: 10px;
+}
+
+/* .inDiv {
+    flex-direction: row;
+} */
+
+
+.legendMain {
+    box-shadow: 1px 1px 10px grey;
+    padding: 10px;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px;
+    /* left: 50px;
+    top: 50px; */
+    z-index: 100;
+}
+
+.legendMain table {
+    font-size: 10px;
+}

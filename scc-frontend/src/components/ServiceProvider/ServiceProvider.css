@@ -1,0 +1,43 @@
+.mainDiv {
+    /* height: 10vh;
+    width: 10vw; */
+    background-color: rgb(201, 201, 201);
+    align-items: center;
+    justify-content: center;
+    display: inline;
+    /* padding: 10px; */
+}
+
+.inDiv {
+    height: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgb(170, 170, 170);
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.inDiv:hover {
+    box-shadow: 1px 1px 10px rgb(170, 170, 170);
+    height: 110px;
+    width: 210px;
+}
+
+.bttn {
+    background-color: rgb(44, 104, 172);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    width: 70%;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.bttn:hover {
+    /* color: rgb(44, 104, 172); */
+    opacity: 0.5;
+}

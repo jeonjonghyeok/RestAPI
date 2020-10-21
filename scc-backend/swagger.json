@@ -1,0 +1,1294 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SCC-Backend",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://133.186.209.103:5000",
+      "variables": {}
+    },
+    {
+      "url": "http://localhost:5000",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/emobility/new": {
+      "post": {
+        "tags": [
+          "E-Mobility"
+        ],
+        "summary": "Add details for E-Mobility Dashboard",
+        "operationId": "AdddetailsforE-MobilityDashboard",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdddetailsforE-MobilityDashboardRequest"
+              },
+              "example": {
+                "cumulative_ride": 282584,
+                "electric_vehical_shared": 2589,
+                "parking_are_reduction": 5894,
+                "renewable_energy_consumption": 1.24,
+                "traffic_sharing_rate": 20,
+                "greego": 29745,
+                "drt": 12897,
+                "twizy": 15452,
+                "un1": 38524,
+                "un2": 23854,
+                "un3": 22845
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/emobility": {
+      "get": {
+        "tags": [
+          "E-Mobility"
+        ],
+        "summary": "Get details for E-Mobility Dashboard",
+        "operationId": "GetdetailsforE-MobilityDashboard",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/emobility/integrated": {
+      "post": {
+        "tags": [
+          "E-Mobility"
+        ],
+        "summary": "Add E-Mobility Details for Integrated Dashboard",
+        "operationId": "AddE-MobilityDetailsforIntegratedDashboard",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddE-MobilityDetailsforIntegratedDashboardRequest"
+              },
+              "example": {
+                "members": 143317,
+                "cumulative_ride": 282548,
+                "electric_vehical_shared": 2589,
+                "ecar_available": 875,
+                "ecar_unusable": 1523,
+                "ecar_charging": 191,
+                "ecar_total": 2589,
+                "ekickboard_available": 87,
+                "ekickboard_unusable": 154,
+                "ekickboard_charging": 25,
+                "ekickboard_total": 269
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "E-Mobility"
+        ],
+        "summary": "Get E-Mobility Details for Integrated Dashboard",
+        "operationId": "GetE-MobilityDetailsforIntegratedDashboard",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/renewable/new": {
+      "post": {
+        "tags": [
+          "Renewable"
+        ],
+        "summary": "Add details for Renewable Dashboard",
+        "operationId": "AdddetailsforRenewableDashboard",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdddetailsforRenewableDashboardRequest"
+              },
+              "example": {
+                "solar": {
+                  "cumulative_power_generation": 21587,
+                  "facility_capacity": 18.57,
+                  "co2_reduction": 10587,
+                  "drinking_water_effect": 1610587,
+                  "current_output": 15.57,
+                  "weekly_power_generation": {
+                    "1": 270,
+                    "2": 240,
+                    "3": 245,
+                    "4": 255,
+                    "5": 260,
+                    "6": 265,
+                    "7": 150
+                  },
+                  "monthly_power_generation": {
+                    "1": 4158978,
+                    "2": 4452549,
+                    "3": 5092485,
+                    "4": 5324586,
+                    "5": 6029583,
+                    "6": 6585995,
+                    "7": 7053417,
+                    "8": 7565421,
+                    "9": 6835835,
+                    "10": 5953224,
+                    "11": 5023148,
+                    "12": 4268755
+                  }
+                },
+                "wind": {
+                  "cumulative_power_generation": 33238,
+                  "facility_capacity": 29.44,
+                  "co2_reduction": 14467,
+                  "drinking_water_effect": 2395000,
+                  "current_output": 7.36,
+                  "weekly_power_generation": {
+                    "1": 270,
+                    "2": 240,
+                    "3": 245,
+                    "4": 255,
+                    "5": 260,
+                    "6": 265,
+                    "7": 150
+                  },
+                  "monthly_power_generation": {
+                    "1": 4158978,
+                    "2": 4452549,
+                    "3": 5092485,
+                    "4": 5324586,
+                    "5": 6029583,
+                    "6": 6585995,
+                    "7": 7053417,
+                    "8": 7565421,
+                    "9": 6835835,
+                    "10": 5953224,
+                    "11": 5023148,
+                    "12": 4268755
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/renewable": {
+      "get": {
+        "tags": [
+          "Renewable"
+        ],
+        "summary": "Get details for Renewable Dashboard",
+        "operationId": "GetdetailsforRenewableDashboard",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/renewable/integrated": {
+      "post": {
+        "tags": [
+          "Renewable"
+        ],
+        "summary": "Add Renewable Details for Integrated Dashboard",
+        "operationId": "AddRenewableDetailsforIntegratedDashboard",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRenewableDetailsforIntegratedDashboardRequest"
+              },
+              "example": {
+                "cumulative_power_generation": 54825,
+                "total_facility_capacity": 48.01,
+                "co2_reduction": 25054,
+                "drinking_water_effect": 4005587,
+                "number_of_chargers_installed": 31,
+                "electricity_extraction_volume": 752
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "Renewable"
+        ],
+        "summary": "Get Renewable Details for Integrated Dashboard",
+        "operationId": "GetRenewableDetailsforIntegratedDashboard",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/insight/new": {
+      "post": {
+        "tags": [
+          "Insight"
+        ],
+        "summary": "Add  Map Marker information (single)",
+        "operationId": "AddMapMarkerinformation(single)",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMapMarkerinformation%28single%29Request"
+              },
+              "example": {
+                "title": "Smart Hub GS Jungmun Intersection",
+                "type": "smart_hub",
+                "lat": 33.251292,
+                "lng": 126.431457,
+                "details": [
+                  "Monthly users: 587 people",
+                  "Monthly charge: 1.7 MW",
+                  "Monthly CO2 reduction: 1,254 tCO2"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/insight": {
+      "get": {
+        "tags": [
+          "Insight"
+        ],
+        "summary": "Get all Map Markers",
+        "operationId": "GetallMapMarkers",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/insight/keyinsight/new": {
+      "post": {
+        "tags": [
+          "Insight"
+        ],
+        "summary": "Add Key Insight details for Insight Dashboard",
+        "operationId": "AddKeyInsightdetailsforInsightDashboard",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddKeyInsightdetailsforInsightDashboardRequest"
+              },
+              "example": {
+                "total_power_generation": 53897,
+                "co2_reduction": 25054,
+                "reduction_power_rate_previous_year": 52,
+                "power_surplus_2019": 3678,
+                "power_surplus_2020": 1754,
+                "emobility_user": 143317,
+                "renewable_enery_consuption": 1924,
+                "monthly": [
+                  25,
+                  32,
+                  37,
+                  45,
+                  54,
+                  62,
+                  75,
+                  80,
+                  85,
+                  86,
+                  87,
+                  88
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/insight/keyinsight": {
+      "get": {
+        "tags": [
+          "Insight"
+        ],
+        "summary": "Get Key Insight details for Insight Dashboard",
+        "operationId": "GetKeyInsightdetailsforInsightDashboard",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://localhost:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/singlesignon": {
+      "get": {
+        "tags": [
+          "SSO"
+        ],
+        "summary": "Onboard External Users",
+        "operationId": "OnboardExternalUsers",
+        "parameters": [
+          {
+            "name": "x-auth-token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS2ltIEdvLWV1biIsImVtYWlsIjoiZ2dvbmVraW1AZ21haWwuY29tIiwiU1NOIjoxMjM0NTYxMjM0NTY3fQ.6ax4I7ljBRv7NHwM89L7iTOveAHmEOPcElIfCvdbTY4"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "servers": [
+          {
+            "url": "http://localhost:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/partner/createtoken": {
+      "post": {
+        "tags": [
+          "Partner Platform"
+        ],
+        "summary": "Create token for Partner Platforms",
+        "operationId": "CreatetokenforPartnerPlatforms",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatetokenforPartnerPlatformsRequest"
+              },
+              "example": {
+                "name": "Arhaam Patvi",
+                "email": "thearhaam@gmail.com",
+                "SSN": 1234561234567
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://localhost:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/user/register": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Register a user",
+        "operationId": "Registerauser",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterauserRequest"
+              },
+              "example": {
+                "name": "Arhaam Patvi",
+                "email": "thearhaam@gmail.com",
+                "password": "123456",
+                "SSN": 1234561234567
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/user/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Login using existing credentials",
+        "operationId": "Loginusingexistingcredentials",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginusingexistingcredentialsRequest"
+              },
+              "example": {
+                "email": "thearhaam@gmail.com",
+                "password": "123456"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://133.186.209.103:5000",
+            "variables": {}
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdddetailsforE-MobilityDashboardRequest": {
+        "title": "AdddetailsforE-MobilityDashboardRequest",
+        "required": [
+          "cumulative_ride",
+          "electric_vehical_shared",
+          "parking_are_reduction",
+          "renewable_energy_consumption",
+          "traffic_sharing_rate",
+          "greego",
+          "drt",
+          "twizy",
+          "un1",
+          "un2",
+          "un3"
+        ],
+        "type": "object",
+        "properties": {
+          "cumulative_ride": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "electric_vehical_shared": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "parking_are_reduction": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "renewable_energy_consumption": {
+            "type": "number"
+          },
+          "traffic_sharing_rate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "greego": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "drt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "twizy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "un1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "un2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "un3": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "cumulative_ride": 282584,
+          "electric_vehical_shared": 2589,
+          "parking_are_reduction": 5894,
+          "renewable_energy_consumption": 1.24,
+          "traffic_sharing_rate": 20,
+          "greego": 29745,
+          "drt": 12897,
+          "twizy": 15452,
+          "un1": 38524,
+          "un2": 23854,
+          "un3": 22845
+        }
+      },
+      "AddE-MobilityDetailsforIntegratedDashboardRequest": {
+        "title": "AddE-MobilityDetailsforIntegratedDashboardRequest",
+        "required": [
+          "members",
+          "cumulative_ride",
+          "electric_vehical_shared",
+          "ecar_available",
+          "ecar_unusable",
+          "ecar_charging",
+          "ecar_total",
+          "ekickboard_available",
+          "ekickboard_unusable",
+          "ekickboard_charging",
+          "ekickboard_total"
+        ],
+        "type": "object",
+        "properties": {
+          "members": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cumulative_ride": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "electric_vehical_shared": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ecar_available": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ecar_unusable": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ecar_charging": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ecar_total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ekickboard_available": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ekickboard_unusable": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ekickboard_charging": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ekickboard_total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "members": 143317,
+          "cumulative_ride": 282548,
+          "electric_vehical_shared": 2589,
+          "ecar_available": 875,
+          "ecar_unusable": 1523,
+          "ecar_charging": 191,
+          "ecar_total": 2589,
+          "ekickboard_available": 87,
+          "ekickboard_unusable": 154,
+          "ekickboard_charging": 25,
+          "ekickboard_total": 269
+        }
+      },
+      "AdddetailsforRenewableDashboardRequest": {
+        "title": "AdddetailsforRenewableDashboardRequest",
+        "required": [
+          "solar",
+          "wind"
+        ],
+        "type": "object",
+        "properties": {
+          "solar": {
+            "$ref": "#/components/schemas/Solar"
+          },
+          "wind": {
+            "$ref": "#/components/schemas/Wind"
+          }
+        },
+        "example": {
+          "solar": {
+            "cumulative_power_generation": 21587,
+            "facility_capacity": 18.57,
+            "co2_reduction": 10587,
+            "drinking_water_effect": 1610587,
+            "current_output": 15.57,
+            "weekly_power_generation": {
+              "1": 270,
+              "2": 240,
+              "3": 245,
+              "4": 255,
+              "5": 260,
+              "6": 265,
+              "7": 150
+            },
+            "monthly_power_generation": {
+              "1": 4158978,
+              "2": 4452549,
+              "3": 5092485,
+              "4": 5324586,
+              "5": 6029583,
+              "6": 6585995,
+              "7": 7053417,
+              "8": 7565421,
+              "9": 6835835,
+              "10": 5953224,
+              "11": 5023148,
+              "12": 4268755
+            }
+          },
+          "wind": {
+            "cumulative_power_generation": 33238,
+            "facility_capacity": 29.44,
+            "co2_reduction": 14467,
+            "drinking_water_effect": 2395000,
+            "current_output": 7.36,
+            "weekly_power_generation": {
+              "1": 270,
+              "2": 240,
+              "3": 245,
+              "4": 255,
+              "5": 260,
+              "6": 265,
+              "7": 150
+            },
+            "monthly_power_generation": {
+              "1": 4158978,
+              "2": 4452549,
+              "3": 5092485,
+              "4": 5324586,
+              "5": 6029583,
+              "6": 6585995,
+              "7": 7053417,
+              "8": 7565421,
+              "9": 6835835,
+              "10": 5953224,
+              "11": 5023148,
+              "12": 4268755
+            }
+          }
+        }
+      },
+      "Solar": {
+        "title": "Solar",
+        "required": [
+          "cumulative_power_generation",
+          "facility_capacity",
+          "co2_reduction",
+          "drinking_water_effect",
+          "current_output",
+          "weekly_power_generation",
+          "monthly_power_generation"
+        ],
+        "type": "object",
+        "properties": {
+          "cumulative_power_generation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "facility_capacity": {
+            "type": "number"
+          },
+          "co2_reduction": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "drinking_water_effect": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "current_output": {
+            "type": "number"
+          },
+          "weekly_power_generation": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "monthly_power_generation": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "example": {
+          "cumulative_power_generation": 21587,
+          "facility_capacity": 18.57,
+          "co2_reduction": 10587,
+          "drinking_water_effect": 1610587,
+          "current_output": 15.57,
+          "weekly_power_generation": {
+            "1": 270,
+            "2": 240,
+            "3": 245,
+            "4": 255,
+            "5": 260,
+            "6": 265,
+            "7": 150
+          },
+          "monthly_power_generation": {
+            "1": 4158978,
+            "2": 4452549,
+            "3": 5092485,
+            "4": 5324586,
+            "5": 6029583,
+            "6": 6585995,
+            "7": 7053417,
+            "8": 7565421,
+            "9": 6835835,
+            "10": 5953224,
+            "11": 5023148,
+            "12": 4268755
+          }
+        }
+      },
+      "Wind": {
+        "title": "Wind",
+        "required": [
+          "cumulative_power_generation",
+          "facility_capacity",
+          "co2_reduction",
+          "drinking_water_effect",
+          "current_output",
+          "weekly_power_generation",
+          "monthly_power_generation"
+        ],
+        "type": "object",
+        "properties": {
+          "cumulative_power_generation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "facility_capacity": {
+            "type": "number"
+          },
+          "co2_reduction": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "drinking_water_effect": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "current_output": {
+            "type": "number"
+          },
+          "weekly_power_generation": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "monthly_power_generation": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "example": {
+          "cumulative_power_generation": 33238,
+          "facility_capacity": 29.44,
+          "co2_reduction": 14467,
+          "drinking_water_effect": 2395000,
+          "current_output": 7.36,
+          "weekly_power_generation": {
+            "1": 270,
+            "2": 240,
+            "3": 245,
+            "4": 255,
+            "5": 260,
+            "6": 265,
+            "7": 150
+          },
+          "monthly_power_generation": {
+            "1": 4158978,
+            "2": 4452549,
+            "3": 5092485,
+            "4": 5324586,
+            "5": 6029583,
+            "6": 6585995,
+            "7": 7053417,
+            "8": 7565421,
+            "9": 6835835,
+            "10": 5953224,
+            "11": 5023148,
+            "12": 4268755
+          }
+        }
+      },
+      "AddRenewableDetailsforIntegratedDashboardRequest": {
+        "title": "AddRenewableDetailsforIntegratedDashboardRequest",
+        "required": [
+          "cumulative_power_generation",
+          "total_facility_capacity",
+          "co2_reduction",
+          "drinking_water_effect",
+          "number_of_chargers_installed",
+          "electricity_extraction_volume"
+        ],
+        "type": "object",
+        "properties": {
+          "cumulative_power_generation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total_facility_capacity": {
+            "type": "number"
+          },
+          "co2_reduction": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "drinking_water_effect": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "number_of_chargers_installed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "electricity_extraction_volume": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "cumulative_power_generation": 54825,
+          "total_facility_capacity": 48.01,
+          "co2_reduction": 25054,
+          "drinking_water_effect": 4005587,
+          "number_of_chargers_installed": 31,
+          "electricity_extraction_volume": 752
+        }
+      },
+      "AddMapMarkerinformation(single)Request": {
+        "title": "AddMapMarkerinformation(single)Request",
+        "required": [
+          "title",
+          "type",
+          "lat",
+          "lng",
+          "details"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "title": "Smart Hub GS Jungmun Intersection",
+          "type": "smart_hub",
+          "lat": 33.251292,
+          "lng": 126.431457,
+          "details": [
+            "Monthly users: 587 people",
+            "Monthly charge: 1.7 MW",
+            "Monthly CO2 reduction: 1,254 tCO2"
+          ]
+        }
+      },
+      "AddKeyInsightdetailsforInsightDashboardRequest": {
+        "title": "AddKeyInsightdetailsforInsightDashboardRequest",
+        "required": [
+          "total_power_generation",
+          "co2_reduction",
+          "reduction_power_rate_previous_year",
+          "power_surplus_2019",
+          "power_surplus_2020",
+          "emobility_user",
+          "renewable_enery_consuption",
+          "monthly"
+        ],
+        "type": "object",
+        "properties": {
+          "total_power_generation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "co2_reduction": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reduction_power_rate_previous_year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "power_surplus_2019": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "power_surplus_2020": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "emobility_user": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "renewable_enery_consuption": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "monthly": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "total_power_generation": 53897,
+          "co2_reduction": 25054,
+          "reduction_power_rate_previous_year": 52,
+          "power_surplus_2019": 3678,
+          "power_surplus_2020": 1754,
+          "emobility_user": 143317,
+          "renewable_enery_consuption": 1924,
+          "monthly": [
+            25,
+            32,
+            37,
+            45,
+            54,
+            62,
+            75,
+            80,
+            85,
+            86,
+            87,
+            88
+          ]
+        }
+      },
+      "CreatetokenforPartnerPlatformsRequest": {
+        "title": "CreatetokenforPartnerPlatformsRequest",
+        "required": [
+          "name",
+          "email",
+          "SSN"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "SSN": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "example": {
+          "name": "Arhaam Patvi",
+          "email": "thearhaam@gmail.com",
+          "SSN": 1234561234567
+        }
+      },
+      "RegisterauserRequest": {
+        "title": "RegisterauserRequest",
+        "required": [
+          "name",
+          "email",
+          "password",
+          "SSN"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "SSN": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "example": {
+          "name": "Arhaam Patvi",
+          "email": "thearhaam@gmail.com",
+          "password": "123456",
+          "SSN": 1234561234567
+        }
+      },
+      "LoginusingexistingcredentialsRequest": {
+        "title": "LoginusingexistingcredentialsRequest",
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "thearhaam@gmail.com",
+          "password": "123456"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "E-Mobility",
+      "description": ""
+    },
+    {
+      "name": "Renewable",
+      "description": ""
+    },
+    {
+      "name": "Insight",
+      "description": ""
+    },
+    {
+      "name": "SSO",
+      "description": ""
+    },
+    {
+      "name": "Partner Platform",
+      "description": ""
+    },
+    {
+      "name": "User",
+      "description": ""
+    }
+  ]
+}

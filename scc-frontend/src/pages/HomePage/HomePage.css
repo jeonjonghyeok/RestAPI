@@ -1,0 +1,41 @@
+.mainDiv{
+    display: inline;
+    /* width: 100vw; */
+}
+
+.bannerDiv {
+    justify-content: center;
+}
+
+.bannerInDiv {
+    height: 70%;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    /* background-color: rgb(232, 241, 250); */
+    background-image: url('../../assets//images/bannerbg.png');
+    /* background-attachment: fixed; */
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleDiv h1{
+    display: inline-block;
+    transition: 0.5s;
+    /* background-color: yellow; */
+}
+.titleDiv h1:hover{
+    display: inline-block;
+    font-size: 50px;
+    /* background-color: yellow; */
+}
+
+.SPDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 100%;
+    /* background-color: aquamarine; */
+}
